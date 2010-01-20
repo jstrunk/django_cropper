@@ -1,0 +1,9 @@
+
+1.19.10
+-------
+
+* updated the project to follow the django-staticfiles design pattern
+* updated template to retrieve static files path via {{ STATIC_URL }} value
+* updated repo to include the static files
+* updated the example project to include STATIC_URL simple configuration. The
+django-staticfiles implementation is much more robust.
