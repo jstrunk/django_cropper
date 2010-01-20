@@ -64,7 +64,7 @@ class CroppedImage(models.Model):
     w = models.PositiveSmallIntegerField(null = True, blank = True)
     h = models.PositiveSmallIntegerField(null = True, blank = True)
     image = models.ImageField(
-        upload_to='uploads//cropper/crops/%Y/%m', blank = True, max_length=255
+        upload_to='uploads/cropper/crops/%Y/%m', blank = True, max_length=255
     )
     
     def save(self, *args, **kwargs):
