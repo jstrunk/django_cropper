@@ -7,10 +7,10 @@ class SourceImage(models.Model):
     name = models.CharField(max_length = 255, blank = True)
     description = models.TextField(blank = True)
     image = models.ImageField(
-        upload_to='sources/%Y/%m', blank = True, max_length=255
+        upload_to='uploads/cropper/sources/%Y/%m', blank = True, max_length=255
     )
     preview = models.ImageField(
-        upload_to='preview/%Y/%m', blank = True, max_length=255, editable=0
+        upload_to='uploads/cropper/preview/%Y/%m', blank = True, max_length=255, editable=0
     )
     url = models.URLField(verify_exists = False, blank = True, help_text="""
     This doesn't do anything yet...
@@ -64,7 +64,7 @@ class CroppedImage(models.Model):
     w = models.PositiveSmallIntegerField(null = True, blank = True)
     h = models.PositiveSmallIntegerField(null = True, blank = True)
     image = models.ImageField(
-        upload_to='crops/%Y/%m', blank = True, max_length=255
+        upload_to='uploads//cropper/crops/%Y/%m', blank = True, max_length=255
     )
     
     def save(self, *args, **kwargs):
