@@ -2,9 +2,9 @@
 
 {% block extrahead %}
 {{ block.super }}
-<script type="text/javascript" src="/static/cropper-assets/jquery.min.js">
+<script type="text/javascript" src="{{ STATIC_URL }}js/jcrop/jquery.min.js">
 </script>
-<script type="text/javascript" src="/static/cropper-assets/jquery.Jcrop.js">
+<script type="text/javascript" src="{{ STATIC_URL }}js/jcrop/jquery.Jcrop.js">
 </script>
 <script type="text/javascript">
 
@@ -57,7 +57,7 @@ jQuery(window).load(function() {
 } */
 </style>
 <link rel="stylesheet" 
-	href="/static/cropper-assets/jquery.Jcrop.css" type="text/css">
+	href="{{ STATIC_URL }}css/jcrop/jquery.Jcrop.css" type="text/css">
 {% endblock %}
 
 {% block content %}
