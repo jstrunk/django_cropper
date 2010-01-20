@@ -40,7 +40,7 @@ MEDIA_ROOT = os.path.join(OUR_ROOT, 'static')
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
 MEDIA_URL = '/static/'
 
-STATIC_URL = '/demo_project/static/'
+STATIC_URL = '/static/demo_project/'
 
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
@@ -68,7 +68,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.debug",
     "django.core.context_processors.i18n",
     "django.core.context_processors.media",
-    "context_processors.static_url",
+    "context_processor.static_url",
 )
 
 ROOT_URLCONF = 'demo_project.urls'
