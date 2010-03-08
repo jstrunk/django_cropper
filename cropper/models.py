@@ -57,6 +57,8 @@ class CropSize(models.Model):
             return u'%sx%s' % (self.width, self.height)
 
 class CroppedImage(models.Model):
+    name = models.CharField(max_length = 255, blank = True)
+    description = models.TextField(blank = True)
     source = models.ForeignKey(SourceImage)
     size = models.ForeignKey(CropSize)
     x = models.PositiveSmallIntegerField(null = True, blank = True)
@@ -97,4 +99,7 @@ class CroppedImage(models.Model):
         super(CroppedImage, self).save(*args, **kwargs)
     
     def __unicode__(self):
-        return u'%s cropped to %s' % (self.source, self.size)
+        if self.name:
+                return self.name
+        else:
+                return u'%s cropped to %s' % (self.source, self.size)
